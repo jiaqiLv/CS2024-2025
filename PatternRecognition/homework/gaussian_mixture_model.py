@@ -6,6 +6,10 @@ import numpy as np
 from sklearn.mixture import GaussianMixture
 
 class GMM():
+    """
+    https://blog.csdn.net/qq_52466006/article/details/127166877
+    https://blog.csdn.net/qq_52466006/article/details/127186276
+    """
     def __init__(self) -> None:
         self.theta = {}
         self.theta_recorder = []
