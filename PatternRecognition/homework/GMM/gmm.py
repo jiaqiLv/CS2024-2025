@@ -68,12 +68,11 @@ def calculate_accuracy_recall(y_true, y_pred, n_components):
         recall = contingency_matrix[row, col] / cluster_total if cluster_total > 0 else 0
         recall_values.append(recall)
     recall = np.mean(recall_values)
-
     return accuracy, recall
 
 def main():
     parser = argparse.ArgumentParser(description='GMM')
-    parser.add_argument('--dataset',type=str,default='wine')
+    parser.add_argument('--dataset',type=str,default='iris')
     args = parser.parse_args()
     if args.dataset == 'iris':
         data = load_iris()
